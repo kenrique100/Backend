@@ -30,7 +30,7 @@ USER kombe
 # Ref :https://spring.io/guides/topicals/spring-boot-docker/
 # Ref : https://www.youtube.com/watch?v=4ugChIR9sS8&t=616s
 
-VOLUME /tmp
+# VOLUME /tmp
 ARG DEPENDENCY=/workspace/app/target/dependency
 COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF
